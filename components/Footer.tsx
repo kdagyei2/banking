@@ -5,11 +5,11 @@ import React from 'react'
 
 const Footer = ({ user, type = 'desktop' }: FooterProps) => {
     const handleLogOut = async () => {
-        //const router = useRouter();
+        const router = useRouter();
 
         const loggedOut = await logoutAccount();
 
-        if(loggedOut) redirect('/sign-in')
+        if(loggedOut) router.push('/sign-in')
     }
 
 
@@ -17,7 +17,7 @@ const Footer = ({ user, type = 'desktop' }: FooterProps) => {
     <footer className="footer" >
         <div className={type === 'mobile' ? 'footer_name-mobile' : 'footer_name'}>
             <p className="text-xl font-bold text-gray-700" >
-                {user?.name[0]}
+                {user?.firstName[0]}
             </p>
         </div>
 

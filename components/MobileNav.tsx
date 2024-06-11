@@ -8,12 +8,13 @@ import {
     SheetTitle,
     SheetTrigger,
   } from "@/components/ui/sheet"
-import Image from "next/image"
-import { sidebarLinks } from '@/constants'
-import { cn } from '@/lib/utils'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import Footer from "../Footer";
+import { sidebarLinks } from "@/constants";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Footer from "./Footer";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+
   
 const MobileNav = ({ user }: MobileNavProps) => {
     const pathname = usePathname();
